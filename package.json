@@ -5,7 +5,6 @@
   "author": "MohammadMahdi Zamanian <mm25zamanian@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "install": "yarn",
     "build": "npx webpack",
     "watch": "yarn build -- -w"
   },
@@ -21,5 +20,9 @@
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "workbox": "^0.0.0"
+  },
+  "dependencies": {
+    "boxicons": "^2.0.9",
+    "swipe-event-listener": "^1.2.1"
   }
 }

@@ -1,0 +1,7 @@
+@use "sass:math";
+@import "./color";
+
+$header-height:80px;
+$desk-header-height:100px;
+$nav-raduis-component-size:25px;
+$nav-raduis-component-size-y2:math.div($nav-raduis-component-size, 2);

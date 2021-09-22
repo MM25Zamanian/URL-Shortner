@@ -3,12 +3,12 @@ nav {
   position: fixed;
   top: #{$header-height};
   height: calc(100vh - #{$header-height});
-  right: 0;
+  left: 0;
   width: 80px;
   background-color: $blue-grey-900;
   overflow-x: hidden;
-  border-right: 10px solid $blue-grey-900;
-  border-left: 10px solid $bs-color;
+  border-left: 10px solid $blue-grey-900;
+  border-right: 10px solid $bs-color;
   z-index: 100;
   box-shadow: 0px 0px 30px 0px #4448;
   align-items: center;
@@ -17,7 +17,7 @@ nav {
   &,
   & * {
     transition: width 600ms ease,
-      right 600ms ease,
+      left 600ms ease,
       box-shadow 600ms ease,
       color 600ms ease,
       background-color 600ms ease,
@@ -32,8 +32,8 @@ nav {
     height: 80px !important;
     width: 100% !important;
     top: 0 !important;
-    left: 0 !important;
     right: 0 !important;
+    left: 0 !important;
     border-left: none !important;
     border-right: none !important;
     border-top: 10px solid $blue-grey-900 !important;
@@ -47,7 +47,7 @@ nav {
         height: 60px !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        margin-right: 5px !important;
+        margin-left: 5px !important;
         margin-left: 5px !important;
         border-radius: 7px !important;
 
@@ -56,7 +56,7 @@ nav {
             position: absolute;
             top: 100%;
             padding-top: 10px !important;
-            right: 0;
+            left: 0;
             min-width: 300px;
             background-color: $blue-grey-900 !important;
             border-bottom-left-radius: 7px !important;
@@ -75,7 +75,7 @@ nav {
 
         &-name {
           padding: 0px !important;
-          padding-left: 15px !important;
+          padding-right: 15px !important;
         }
 
         &::before,
@@ -91,7 +91,7 @@ nav {
         }
 
         &::after {
-          right: -#{$nav-raduis-component-size} !important;
+          left: -#{$nav-raduis-component-size} !important;
           box-shadow: -#{$nav-raduis-component-size-y2} #{$nav-raduis-component-size-y2} 0px 0px $bs-color !important;
         }
       }
@@ -104,7 +104,7 @@ nav {
   }
 
   @media (max-width:768px) {
-    right: -300px;
+    left: -300px;
     width: 300px;
     box-shadow: none !important;
   }
@@ -114,7 +114,7 @@ nav {
     box-shadow: 0px 0px 30px 0px #333 !important;
 
     @media (max-width:768px) {
-      right: 0;
+      left: 0;
     }
 
     @media (max-width:1000px) {
@@ -186,8 +186,8 @@ nav {
       }
 
       &::after {
-        left: 0;
-        box-shadow: -#{$nav-raduis-component-size-y2} -#{$nav-raduis-component-size-y2} 0px 0px $bs-color;
+        right: 0;
+        box-shadow: #{$nav-raduis-component-size-y2} -#{$nav-raduis-component-size-y2} 0px 0px $bs-color;
       }
     }
 
@@ -208,7 +208,7 @@ nav {
           font-size: 1em;
           color: #fff;
           align-items: center;
-          margin-left: 15px;
+          margin-right: 15px;
           transition: transform 300ms ease;
 
           @media (max-width:1000px) {
@@ -260,8 +260,8 @@ nav {
 
       &.active {
         background-color: $bs-color;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
 
         &::after,
         &::before {
@@ -285,17 +285,17 @@ nav {
 
       &::before,
       &::after {
-        left: 0;
+        right: 0;
       }
 
       &::before {
         top: -#{$nav-raduis-component-size};
-        box-shadow: -#{$nav-raduis-component-size-y2} #{$nav-raduis-component-size-y2} 0px 0px $bs-color;
+        box-shadow: #{$nav-raduis-component-size-y2} #{$nav-raduis-component-size-y2} 0px 0px $bs-color;
       }
 
       &::after {
         bottom: -#{$nav-raduis-component-size};
-        box-shadow: -#{$nav-raduis-component-size-y2} -#{$nav-raduis-component-size-y2} 0px 0px $bs-color;
+        box-shadow: #{$nav-raduis-component-size-y2} -#{$nav-raduis-component-size-y2} 0px 0px $bs-color;
       }
 
       &-name {
@@ -304,13 +304,14 @@ nav {
         height: 60px;
         align-items: center;
         justify-content: flex-start;
-        padding-left: 15px;
+        padding-right: 15px;
         color: #fff;
         flex-shrink: 0;
+        text-transform: capitalize;
 
         @media (max-width:1000px) {
           opacity: 0;
-          transform-origin: right;
+          transform-origin: left;
           transform: scaleX(0);
         }
       }
@@ -388,11 +389,11 @@ nav {
   display: flex;
   position: fixed;
   top: #{$header-height};
-  right: -100px;
+  left: -100px;
   width: 100px;
   height: calc(100vh - #{$header-height});
 
   @media (max-width:768px) {
-    right: 0 !important;
+    left: 0 !important;
   }
 }

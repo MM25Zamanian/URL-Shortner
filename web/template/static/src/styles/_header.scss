@@ -1,0 +1,43 @@
+header.mobile {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  height: #{$header-height};
+  background-color: $blue-grey-900;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 30px 0px #333;
+  padding: 10px;
+  z-index: 101;
+  border-bottom: 5px solid $bs-color;
+
+  @media (min-width:1000px) {
+    display: none;
+  }
+
+  .header {
+    &__item {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      color: #fff;
+      padding: 0 5px;
+      text-transform: capitalize;
+      border-radius: 5px;
+    }
+
+    &__text {
+      font-size: 1em;
+    }
+
+    &__space {
+      flex-grow: 1;
+    }
+
+    &__signup {
+      background-color: $bs-color;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: mix(mix(#fff, $grey-100, 75%), $bs-color, 95%);
+
+  &.without-desktop-header {
+    padding-top: #{$header-height};
+  }
+
+  @media (max-width:1000px) {
+    padding-top: #{$header-height};
+  }
+
+  @media (max-width:1000px) and (min-width:769px) {
+    padding-right: #{$header-height};
+  }
+}
